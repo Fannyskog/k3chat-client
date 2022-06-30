@@ -1,0 +1,145 @@
+body {
+background-color: rgb(61, 167, 228);
+
+
+
+}
+.chat {
+  width: 30rem;
+  height:30rem;
+  background:white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px 2px;
+  position:absolute;
+  left: 25rem;
+  top:2rem;
+  
+}
+.room-cont {
+  padding:2rem;
+  margin-left:0.5rem;
+  margin-top:7rem;
+  padding-bottom:1.5rem;
+  width:22rem;
+  margin-left:33%;
+  margin-right:30%;
+  border-radius: 10px;
+  border:0.1rem solid black;
+  background-color: rgb(18, 44, 100);
+ 
+  
+}
+input {
+  margin-left:2rem;
+}
+button {
+  margin:0.5rem;
+  border-radius: 5px;
+  color:black;
+  font-size:1.1rem;
+  border:0.1rem solid black;
+  background-color: rgb(61, 167, 228);
+ 
+}
+.leave {
+  background-color: rgb(199, 43, 43);
+ 
+}
+
+
+h2 {
+  margin-left:2rem;
+  margin-top:0;
+  color:white;
+  padding:0;
+ 
+}
+
+.chat .chat-body {
+  height: calc(450px - (50px + 70px));
+  background:white;
+  border-radius: 5px;
+}
+
+.chat .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  
+}
+
+#me {
+  justify-content: flex-start;
+}
+
+#me .message-content {
+  justify-content: flex-start;
+}
+
+#me .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: cornflowerblue;
+}
+
+#other .message-info {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-info #username {
+  margin-left: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.chat .chat-body .message .message-info {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat .chat-box {
+  height: 1.8rem;
+  border-top: 0.1rem solid black;
+  padding-top:1rem;
+  position: relative;
+  top:5rem;
+  
+  
+}
+
+.chat .chat-box input {
+  height: 70%;
+  border:0.1rem solid black;
+  padding: 0 0.7em;
+  font-size: 1.5rem;
+  
+}
+
+
