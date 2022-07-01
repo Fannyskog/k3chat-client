@@ -24,7 +24,7 @@ useEffect(() => {
     
   });
 
-  socket.on("createRoom", (data) => {
+  socket.on("create_room", (data) => {
     console.log(data);
   })
 
@@ -32,16 +32,17 @@ useEffect(() => {
 })
 
 function createRoom(room_name) {
-if (username !== "" && room !== "")socket.emit("createRoom", room_name); 
-console.log(`Room: ${room_name} was created`);
+if (username !== "" && room !== "")socket.emit("create_room", room_name); 
+console.log(`${username} created room: ${room_name}`);
 setShowChat(true); 
+
 
 };
 
 
 function joinRoom(room_name) {
 if (username !== "" && room !== "")socket.emit("join_room", room_name); 
-console.log(`User joined room: ${room_name}`); 
+console.log(`${username} joined room: ${room_name}`); 
 setShowChat(true);
 
 };
@@ -52,7 +53,7 @@ setShowChat(true);
       { !showChat ? (
       
           <div className="room-cont">
-          <h2>Create or join chatroom</h2>
+          <h2>Hi and welcome!</h2>
           
         <input placeholder="Username" onChange={(e) => { setUsername(e.target.value);}}></input>
         <input
@@ -62,6 +63,12 @@ setShowChat(true);
               onChange={(e) => setRoomInput(e.target.value)}/>
               
             <button onClick={() => joinRoom(roomInput)}>Join room</button>
+            <input
+              onKeyDown={(e) => {
+                if (e.key === "Enter") createRoom(roomInput);}}
+              placeholder="Enter name"
+              onChange={(e) => setRoomInput(e.target.value)}/>
+
             <button onClick={() => createRoom(roomInput)}>Create room</button>
         </div>
         ) : (
